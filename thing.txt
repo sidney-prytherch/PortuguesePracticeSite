@@ -1,0 +1,1435 @@
+const darCalculations = (infinitive) => {
+    let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+        persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+    verbClass = VerbClass.DAR
+    stem = infinitive.slice(0, -3)
+    impNegStem = `${stem}d`
+    impAffStem = impNegStem
+    impSubjStem = impAffStem
+    presSubjStem = impSubjStem
+    plupIndStem = presSubjStem
+    impIndStem = plupIndStem
+    presIndStem = impIndStem
+    pretIndStem = `${stem}de`
+    persInfStem = `${stem}dar`
+    condIndStem = persInfStem
+    futIndStem = condIndStem
+    futSubjStem = `${stem}der`
+}
+const lerCalculations = (infinitive) => {
+    let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+        persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+    verbClass = VerbClass.LER
+    stem = infinitive.slice(0, -3)
+    impAffStem = `${stem}l`
+    impSubjStem = impAffStem
+    plupIndStem = impSubjStem
+    pretIndStem = plupIndStem
+    impIndStem = pretIndStem
+    presIndStem = impIndStem
+    persInfStem = `${stem}ler`
+    futSubjStem = persInfStem
+    condIndStem = futSubjStem
+    futIndStem = condIndStem
+    impNegStem = `${stem}leia`
+    presSubjStem = impNegStem
+}
+const verCalculations = (infinitive) => {
+    let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+        persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+    verbClass = VerbClass.VER
+    stem = infinitive.slice(0, -3)
+    gerund = `${stem}vendo`
+    participle = `${stem}visto`
+    impAffStem = `${stem}v`
+    impSubjStem = impAffStem
+    plupIndStem = impSubjStem
+    impIndStem = plupIndStem
+    presIndStem = impIndStem
+    pretIndStem = `${stem}vi`
+    persInfStem = `${stem}ver`
+    condIndStem = persInfStem
+    futIndStem = condIndStem
+    impNegStem = `${stem}veja`
+    presSubjStem = impNegStem
+    futSubjStem = `${stem}vir`
+}
+const rirCalculations = (infinitive) => {
+    let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+        persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+    verbClass = VerbClass.RIR
+    stem = infinitive.slice(0, -3)
+    impAffStem = `${stem}ri`
+    pretIndStem = impAffStem
+    presIndStem = pretIndStem
+    impSubjStem = `${stem}r`
+    plupIndStem = impSubjStem
+    impIndStem = plupIndStem
+    persInfStem = `${stem}rir`
+    futSubjStem = persInfStem
+    condIndStem = futSubjStem
+    futIndStem = condIndStem
+    impNegStem = `${stem}ria`
+    presSubjStem = impNegStem
+}
+const oiarCalculations = (infinitive) => {
+    let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+        persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+    verbClass = VerbClass.OIAR
+    stem = infinitive.slice(0, -4)
+    impAffStem = stem
+    presIndStem = impAffStem
+    impSubjStem = `${stem}oi`
+    plupIndStem = impSubjStem
+    pretIndStem = plupIndStem
+    impIndStem = pretIndStem
+    persInfStem = `${stem}oiar`
+    futSubjStem = persInfStem
+    condIndStem = futSubjStem
+    futIndStem = condIndStem
+    impNegStem = `${stem}oie`
+    presSubjStem = impNegStem
+}
+const vergirCalculations = (infinitive) => {
+    let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+        persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+    verbClass = VerbClass.ERGIR
+    stem = infinitive.slice(0, -5)
+    impAffStem = stem
+    presIndStem = impAffStem
+    impSubjStem = `${stem}erg`
+    plupIndStem = impSubjStem
+    impIndStem = plupIndStem
+    pretIndStem = `${stem}ergi`
+    persInfStem = `${stem}ergir`
+    futSubjStem = persInfStem
+    condIndStem = futSubjStem
+    futIndStem = condIndStem
+    impNegStem = `${stem}irja`
+    presSubjStem = impNegStem
+}
+export const stringCalculations = {
+    "ter": terCalculations,
+    "abster": terCalculations,
+    "conter": terCalculations,
+    "suster": terCalculations,
+    "ater": terCalculations,
+    "deter": terCalculations,
+    "entreter": terCalculations,
+    "manter": terCalculations,
+    "obter": terCalculations,
+    "reter": terCalculations,
+    "vir": virCalculations,
+    "devir": virCalculations,
+    "advir": virCalculations,
+    "avir": virCalculations,
+    "convir": virCalculations,
+    "desavir": virCalculations,
+    "intervir": virCalculations,
+    "provir": virCalculations,
+    "sobrevir": virCalculations,
+    "ansiar": iarCalculations,
+    "incendiar": iarCalculations,
+    "mediar": iarCalculations,
+    "odiar": iarCalculations,
+    "remediar": iarCalculations,
+    "intermediar": iarCalculations,
+    "dar": darCalculations,
+    "desdar": darCalculations,
+    "ler": lerCalculations,
+    "reler": lerCalculations,
+    "tresler": lerCalculations,
+    "antever": verCalculations,
+    "entrever": verCalculations,
+    "prever": verCalculations,
+    "rever": verCalculations,
+    "ver": verCalculations,
+    "rir": rirCalculations,
+    "sorrir": rirCalculations,
+    "apoiar": oiarCalculations,
+    "boiar": oiarCalculations,
+    "convergir": vergirCalculations,
+    "divergir": vergirCalculations,
+    "delir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.DELIR
+            stem = ""
+            impAffStem = "del"
+            impSubjStem = impAffStem
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            presIndStem = impIndStem
+            pretIndStem = "deli"
+            persInfStem = "delir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "-"
+            presSubjStem = impNegStem
+    },
+    "caber": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.CABER
+            stem = ""
+            impAffStem = "ca"
+            presIndStem = impAffStem
+            impIndStem = "cab"
+            pretIndStem = "coube"
+            impSubjStem = "coub"
+            plupIndStem = impSubjStem
+            persInfStem = "caber"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "caiba"
+            presSubjStem = impNegStem
+            futSubjStem = "couber"
+    },
+    "estar": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.ESTAR
+            stem = ""
+            impAffStem = "est"
+            pretIndStem = impAffStem
+            impIndStem = pretIndStem
+            presIndStem = impIndStem
+            impSubjStem = "estiv"
+            plupIndStem = impSubjStem
+            persInfStem = "estar"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "esteja"
+            presSubjStem = impNegStem
+            futSubjStem = "estiver"
+    },
+    "gear": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.GEAR
+            stem = ""
+            presIndStem = "geia"
+            impIndStem = "geava"
+            pretIndStem = "geou"
+            plupIndStem = "geara"
+            futIndStem = "geará"
+            condIndStem = "gearia"
+            impNegStem = "geie"
+            impAffStem = impNegStem
+            presSubjStem = impAffStem
+            impSubjStem = "geasse"
+            persInfStem = "gear"
+            futSubjStem = persInfStem
+    },
+    "haver": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.HAVER
+            stem = ""
+            impAffStem = "h"
+            presIndStem = impAffStem
+            impIndStem = "hav"
+            pretIndStem = "houve"
+            impSubjStem = "houv"
+            plupIndStem = impSubjStem
+            persInfStem = "haver"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "haja"
+            presSubjStem = impNegStem
+            futSubjStem = "houver"
+    },
+    "ir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.IR
+            stem = ""
+            impAffStem = ""
+            impIndStem = impAffStem
+            presIndStem = impIndStem
+            impSubjStem = "f"
+            plupIndStem = impSubjStem
+            pretIndStem = plupIndStem
+            persInfStem = "ir"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "v"
+            presSubjStem = impNegStem
+            futSubjStem = "for"
+    },
+    "nevar": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.NEVAR
+            stem = ""
+            presIndStem = "neva"
+            impIndStem = "nevava"
+            pretIndStem = "nevou"
+            plupIndStem = "nevara"
+            futIndStem = "nevará"
+            condIndStem = "nevaria"
+            impNegStem = "neve"
+            impAffStem = impNegStem
+            presSubjStem = impAffStem
+            impSubjStem = "nevasse"
+            persInfStem = "nevar"
+            futSubjStem = persInfStem
+    },
+    "ouvir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.OUVIR
+            stem = ""
+            presIndStem = "o"
+            impSubjStem = "ouv"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "ouvi"
+            persInfStem = "ouvir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "ouça"
+            presSubjStem = impNegStem
+            impAffStem = "ou"
+    },
+    "perder": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.PERDER
+            stem = ""
+            impAffStem = "per"
+            presIndStem = impAffStem
+            impSubjStem = "perd"
+            plupIndStem = impSubjStem
+            pretIndStem = plupIndStem
+            impIndStem = pretIndStem
+            persInfStem = "perder"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "perca"
+            presSubjStem = impNegStem
+    },
+    "poder": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.PODER
+            stem = ""
+            impAffStem = "po"
+            presIndStem = impAffStem
+            impIndStem = "pod"
+            pretIndStem = "p"
+            impSubjStem = "pud"
+            plupIndStem = impSubjStem
+            persInfStem = "poder"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "possa"
+            presSubjStem = impNegStem
+            futSubjStem = "puder"
+    },
+    "pôr": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.POR1
+            stem = ""
+            gerund = "pondo"
+            participle = "posto"
+            persInfStem = "p"
+            impAffStem = persInfStem
+            pretIndStem = impAffStem
+            impIndStem = pretIndStem
+            presIndStem = impIndStem
+            impSubjStem = "pus"
+            plupIndStem = impSubjStem
+            condIndStem = "por"
+            futIndStem = condIndStem
+            impNegStem = "ponha"
+            presSubjStem = impNegStem
+            futSubjStem = "puser"
+    },
+    "prover": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.PROVER
+            stem = ""
+            impAffStem = "prov"
+            impSubjStem = impAffStem
+            plupIndStem = impSubjStem
+            pretIndStem = plupIndStem
+            impIndStem = pretIndStem
+            presIndStem = impIndStem
+            persInfStem = "prover"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "proveja"
+            presSubjStem = impNegStem
+    },
+    "saber": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.SABER
+            stem = ""
+            presIndStem = "s"
+            impIndStem = "sab"
+            pretIndStem = "soube"
+            impSubjStem = "soub"
+            plupIndStem = impSubjStem
+            persInfStem = "saber"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "saiba"
+            presSubjStem = impNegStem
+            futSubjStem = "souber"
+            impAffStem = "sa"
+    },
+    "ser": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.SER
+            stem = ""
+            impIndStem = ""
+            presIndStem = impIndStem
+            impSubjStem = "f"
+            plupIndStem = impSubjStem
+            pretIndStem = plupIndStem
+            persInfStem = "ser"
+            condIndStem = persInfStem
+            futIndStem = condIndStem
+            impNegStem = "seja"
+            presSubjStem = impNegStem
+            futSubjStem = "for"
+            impAffStem = "s"
+    },
+    "tossir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.TOSSIR
+            stem = ""
+            impAffStem = "t"
+            presIndStem = impAffStem
+            impSubjStem = "toss"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "tossi"
+            persInfStem = "tossir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "tussa"
+            presSubjStem = impNegStem
+    },
+    "trazer": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.TRAZER
+            stem = ""
+            impAffStem = "tra"
+            presIndStem = impAffStem
+            impIndStem = "traz"
+            pretIndStem = "trouxe"
+            impSubjStem = "troux"
+            plupIndStem = impSubjStem
+            condIndStem = "trar"
+            futIndStem = condIndStem
+            impNegStem = "traga"
+            presSubjStem = impNegStem
+            futSubjStem = "trouxer"
+            persInfStem = "trazer"
+    },
+    "engolir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.ENGOLIR
+            stem = ""
+            impAffStem = "eng"
+            presIndStem = impAffStem
+            impSubjStem = "engol"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "engoli"
+            persInfStem = "engolir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "engula"
+            presSubjStem = impNegStem
+    },
+    "servir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.SERVIR
+            stem = ""
+            impAffStem = "s"
+            presIndStem = impAffStem
+            impSubjStem = "serv"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "servi"
+            persInfStem = "servir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "sirva"
+            presSubjStem = impNegStem
+    },
+    "saudar": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.SAUDAR
+            stem = ""
+            impNegStem = "sa"
+            impAffStem = impNegStem
+            presSubjStem = impAffStem
+            presIndStem = presSubjStem
+            impSubjStem = "saud"
+            plupIndStem = impSubjStem
+            pretIndStem = plupIndStem
+            impIndStem = pretIndStem
+            persInfStem = "saudar"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+    },
+    "ganir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.GANIR
+            stem = ""
+            impSubjStem = "gan"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            presIndStem = impIndStem
+            pretIndStem = "gani"
+            persInfStem = "ganir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "gana"
+            presSubjStem = impNegStem
+            impAffStem = ""
+    },
+    "reunir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.REUNIR
+            stem = ""
+            impAffStem = "re"
+            presIndStem = impAffStem
+            impSubjStem = "reun"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "reuni"
+            persInfStem = "reunir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "reúna"
+            presSubjStem = impNegStem
+    },
+    "remir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.REMIR
+            stem = ""
+            presIndStem = "re"
+            impSubjStem = "rem"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "remi"
+            persInfStem = "remir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "redima"
+            presSubjStem = impNegStem
+            impAffStem = ""
+    },
+    "dormir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.DORMIR
+            stem = ""
+            impAffStem = "d"
+            presIndStem = impAffStem
+            impSubjStem = "dorm"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "dormi"
+            persInfStem = "dormir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "durma"
+            presSubjStem = impNegStem
+    },
+    "barrir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.BARRIR
+            stem = ""
+            impSubjStem = "barr"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            presIndStem = impIndStem
+            pretIndStem = "barri"
+            persInfStem = "barrir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "barra"
+            presSubjStem = impNegStem
+            impAffStem = ""
+    },
+    "despir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.DESPIR
+            stem = ""
+            impAffStem = "desp"
+            impSubjStem = impAffStem
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            presIndStem = impIndStem
+            pretIndStem = "despi"
+            persInfStem = "despir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "-"
+            presSubjStem = impNegStem
+    },
+    "doer": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.DOER
+            stem = ""
+            gerund = "doendo"
+            participle = "doído"
+            presIndStem = "d"
+            impIndStem = "doí"
+            impSubjStem = "do"
+            plupIndStem = impSubjStem
+            pretIndStem = plupIndStem
+            persInfStem = "doer"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "doa"
+            impAffStem = impNegStem
+            presSubjStem = impAffStem
+    },
+    "falir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.FALIR
+            stem = ""
+            impAffStem = "fali"
+            pretIndStem = impAffStem
+            presIndStem = pretIndStem
+            impSubjStem = "fal"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            persInfStem = "falir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "-"
+            presSubjStem = impNegStem
+    },
+    "explodir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.ODIR
+            stem = ""
+            impSubjStem = "explod"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            presIndStem = impIndStem
+            pretIndStem = "explodi"
+            persInfStem = "explodir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "exploda"
+            presSubjStem = impNegStem
+            impAffStem = ""
+    },
+    "latir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.ATIR
+            stem = ""
+            impSubjStem = "lat"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            presIndStem = impIndStem
+            pretIndStem = "lati"
+            persInfStem = "latir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "lata"
+            presSubjStem = impNegStem
+            impAffStem = ""
+    },
+    "fugir": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.FUGIR
+            stem = ""
+            impAffStem = "f"
+            presIndStem = impAffStem
+            impSubjStem = "fug"
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            pretIndStem = "fugi"
+            persInfStem = "fugir"
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = "fuja"
+            presSubjStem = impNegStem
+    },
+    "resfolegar": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.RESFOLEGAR
+            stem = "resf"
+            presIndStem = stem
+            impSubjStem = `${stem}oleg`
+            plupIndStem = impSubjStem
+            impIndStem = plupIndStem
+            eAndIStem = impSubj`${stem}u`
+            pretIndStem = impSubjStem
+            persInfStem = `${stem}olegar`
+            futSubjStem = persInfStem
+            condIndStem = futSubjStem
+            futIndStem = condIndStem
+            impNegStem = stem
+            presSubjStem = stem
+            impAffStem = stem
+    },
+    "mobiliar": () => {
+        let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+            persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+            verbClass = VerbClass.MOBILIAR
+            stem = "mob"
+            impAffStem = stem
+            presIndStem = stem
+            impSubjStem = `${stem}ili`
+            plupIndStem = impSubjStem
+            impIndStem = impSubjStem
+            pretIndStem = impSubjStem
+            persInfStem = `${stem}iliar`
+            futSubjStem = persInfStem
+            condIndStem = persInfStem
+            futIndStem = persInfStem
+            impNegStem = stem
+            presSubjStem = stem
+    },
+    // Add other strings and their corresponding functions here
+};
+export const endingStringCalculations = {
+    3: {
+        "por": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.POR2
+                stem = infinitive.slice(0, -3)
+                gerund = `${stem}pondo`
+                participle = `${stem}posto`
+                impAffStem = `${stem}p`
+                pretIndStem = impAffStem
+                impIndStem = pretIndStem
+                presIndStem = impIndStem
+                impSubjStem = `${stem}pus`
+                plupIndStem = impSubjStem
+                persInfStem = infinitive
+                condIndStem = persInfStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}ponha`
+                presSubjStem = impNegStem
+                futSubjStem = `${stem}puser`
+        },
+        "ear": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.EAR
+                stem = infinitive.slice(0, -3)
+                impNegStem = `${stem}e`
+                impAffStem = impNegStem
+                impSubjStem = impAffStem
+                presSubjStem = impSubjStem
+                plupIndStem = presSubjStem
+                pretIndStem = plupIndStem
+                impIndStem = pretIndStem
+                presIndStem = impIndStem
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+        },
+        "oer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.OER
+                stem = infinitive.slice(0, -3)
+                gerund = `${stem}oendo`
+                participle = `${stem}oído`
+                impAffStem = stem
+                presIndStem = impAffStem
+                impIndStem = `${stem}oí`
+                impSubjStem = `${stem}o`
+                plupIndStem = impSubjStem
+                pretIndStem = plupIndStem
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}oa`
+                presSubjStem = impNegStem
+        },
+        "air": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.AIR
+                stem = infinitive.slice(0, -3)
+                gerund = `${stem}aindo`
+                participle = `${stem}aído`
+                persInfStem = `${stem}a`
+                impAffStem = persInfStem
+                futSubjStem = impAffStem
+                pretIndStem = futSubjStem
+                presIndStem = pretIndStem
+                impIndStem = `${stem}aí`
+                plupIndStem = `${stem}aír`
+                condIndStem = `${stem}air`
+                futIndStem = condIndStem
+                impNegStem = `${stem}aia`
+                presSubjStem = impNegStem
+                impSubjStem = `${stem}aísse`
+        }
+    },
+    4: {
+        "umir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.UMIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}um`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}umi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}uma`
+                presSubjStem = impNegStem
+        },
+        "upir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.UPIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}up`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}upi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}upa`
+                presSubjStem = impNegStem
+        },
+        "ulir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ULIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}ul`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}uli`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}ula`
+                presSubjStem = impNegStem
+        },
+        "udir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.UDIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}ud`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}udi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}uda`
+                presSubjStem = impNegStem
+        },
+        "crer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.CRER
+                stem = infinitive.slice(0, -4)
+                impAffStem = `${stem}cr`
+                impSubjStem = impAffStem
+                plupIndStem = impSubjStem
+                pretIndStem = plupIndStem
+                impIndStem = pretIndStem
+                presIndStem = impIndStem
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}creia`
+                presSubjStem = impNegStem
+        },
+        "uzir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.UZIR
+                stem = infinitive.slice(0, -2)
+                impAffStem = stem
+                impSubjStem = impAffStem
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                presIndStem = impIndStem
+                pretIndStem = `${stem}i`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}a`
+                presSubjStem = impNegStem
+        },
+        "edir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.EDIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = `${stem}e`
+                presIndStem = impAffStem
+                impSubjStem = `${stem}ed`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}edi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}eça`
+                presSubjStem = impNegStem
+        },
+        "elir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ELIR
+                stem = infinitive.slice(0, -4)
+                gerund = `${stem}elindo`
+                participle = `${stem}ulso`
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}el`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}eli`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}ila`
+                presSubjStem = impNegStem
+        },
+        "erir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ERIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}er`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}eri`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}ira`
+                presSubjStem = impNegStem
+        },
+        "tuir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.TUIR
+                stem = infinitive.slice(0, -4)
+                gerund = `${stem}tuindo`
+                participle = `${stem}tuído`
+                persInfStem = `${stem}tu`
+                impAffStem = persInfStem
+                futSubjStem = impAffStem
+                pretIndStem = futSubjStem
+                presIndStem = pretIndStem
+                impIndStem = `${stem}tuí`
+                plupIndStem = `${stem}tuír`
+                condIndStem = infinitive
+                futIndStem = condIndStem
+                impNegStem = `${stem}tua`
+                presSubjStem = impNegStem
+                impSubjStem = `${stem}tuísse`
+        },
+        "buir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.BUIR
+                stem = infinitive.slice(0, -4)
+                gerund = `${stem}buindo`
+                participle = `${stem}buído`
+                persInfStem = `${stem}bu`
+                impAffStem = persInfStem
+                futSubjStem = impAffStem
+                pretIndStem = futSubjStem
+                presIndStem = pretIndStem
+                impIndStem = `${stem}buí`
+                plupIndStem = `${stem}buír`
+                condIndStem = infinitive
+                futIndStem = condIndStem
+                impNegStem = `${stem}bua`
+                presSubjStem = impNegStem
+                impSubjStem = `${stem}buísse`
+        },
+        "etir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ETIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}et`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}eti`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}ita`
+                presSubjStem = impNegStem
+        },
+        "olir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.OLIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}ol`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}oli`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}ula`
+                presSubjStem = impNegStem
+        }
+    },
+    5: {
+        "ertir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ERTIR
+                stem = infinitive.slice(0, -5)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}ert`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}erti`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}irta`
+                presSubjStem = impNegStem
+        },
+        "dizer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.DIZER
+                stem = infinitive.slice(0, -5)
+                gerund = `${stem}dizendo`
+                participle = `${stem}dito`
+                impAffStem = `${stem}di`
+                presIndStem = impAffStem
+                impIndStem = `${stem}diz`
+                pretIndStem = `${stem}disse`
+                impSubjStem = `${stem}diss`
+                plupIndStem = impSubjStem
+                condIndStem = `${stem}dir`
+                futIndStem = condIndStem
+                impNegStem = `${stem}diga`
+                presSubjStem = impNegStem
+                futSubjStem = `${stem}disser`
+                persInfStem = infinitive
+        },
+        "uspir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.USPIR
+                stem = infinitive.slice(0, -5)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}usp`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}uspi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}uspa`
+                presSubjStem = impNegStem
+        },
+        "fazer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.FAZER
+                stem = infinitive.slice(0, -5)
+                gerund = `${stem}fazendo`
+                participle = `${stem}feito`
+                impAffStem = `${stem}fa`
+                presIndStem = impAffStem
+                impIndStem = `${stem}faz`
+                pretIndStem = `${stem}f`
+                impSubjStem = `${stem}fiz`
+                plupIndStem = impSubjStem
+                condIndStem = `${stem}far`
+                futIndStem = condIndStem
+                impNegStem = `${stem}faça`
+                presSubjStem = impNegStem
+                futSubjStem = `${stem}fizer`
+                persInfStem = infinitive
+        },
+        "abrir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ABRIR
+                stem = infinitive.slice(0, -5)
+                gerund = `${stem}abrindo`
+                participle = `${stem}aberto`
+                impAffStem = `${stem}abr`
+                impSubjStem = impAffStem
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                presIndStem = impIndStem
+                pretIndStem = `${stem}abri`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}abra`
+                presSubjStem = impNegStem
+        },
+        "valer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.VALER
+                stem = infinitive.slice(0, -5)
+                impAffStem = `${stem}val`
+                impSubjStem = impAffStem
+                plupIndStem = impSubjStem
+                pretIndStem = plupIndStem
+                impIndStem = pretIndStem
+                presIndStem = impIndStem
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}valha`
+                presSubjStem = impNegStem
+        },
+        "venir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ENIR
+                stem = infinitive.slice(0, -4)
+                impAffStem = `${stem}e`
+                presIndStem = impAffStem
+                impSubjStem = `${stem}en`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}eni`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = stem
+                presSubjStem = `${stem}ina`
+        },
+        "entir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ENTIR
+                stem = infinitive.slice(0, -5)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}ent`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}enti`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}inta`
+                presSubjStem = impNegStem
+        },
+        "aguar": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.AGUAR
+                stem = infinitive.slice(0, -5)
+                presIndStem = stem
+                impSubjStem = `${stem}agu`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}agu`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = stem
+                presSubjStem = impNegStem
+                impAffStem = stem
+        },
+        "oibir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.OIBIR
+                stem = infinitive.slice(0, -5)
+                presIndStem = `${stem}o`
+                impSubjStem = `${stem}oib`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}oibi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}o`
+                presSubjStem = impNegStem
+                impAffStem = `${stem}o`
+        },
+        "uinar": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.UINAR
+                stem = infinitive.slice(0, -5)
+                presIndStem = `${stem}u`
+                impSubjStem = `${stem}uin`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}uina`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}u`
+                presSubjStem = impNegStem
+                impAffStem = `${stem}u`
+        },
+        "ervir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.ERVIR
+                stem = infinitive.slice(0, -5)
+                impAffStem = stem
+                presIndStem = impAffStem
+                impSubjStem = `${stem}erv`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}ervi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}irva`
+                presSubjStem = impNegStem
+        }
+    },
+    6: {
+        "vestir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.VESTIR
+                stem = infinitive.slice(0, -6)
+                impAffStem = `${stem}v`
+                presIndStem = impAffStem
+                impSubjStem = `${stem}vest`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}vesti`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}vista`
+                presSubjStem = impNegStem
+        },
+        "seguir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.SEGUIR
+                stem = infinitive.slice(0, -6)
+                impAffStem = `${stem}s`
+                presIndStem = impAffStem
+                impSubjStem = `${stem}segu`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}segui`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}siga`
+                presSubjStem = impNegStem
+        },
+        "cobrir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.COBRIR
+                stem = infinitive.slice(0, -6)
+                gerund = `${stem}cobrindo`
+                participle = `${stem}coberto`
+                impAffStem = `${stem}c`
+                presIndStem = impAffStem
+                impSubjStem = `${stem}cobr`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}cobri`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}cubra`
+                presSubjStem = impNegStem
+        },
+        "querer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.QUERER
+                stem = infinitive.slice(0, -6)
+                impIndStem = `${stem}quer`
+                presIndStem = impIndStem
+                impSubjStem = `${stem}quis`
+                plupIndStem = impSubjStem
+                pretIndStem = plupIndStem
+                persInfStem = infinitive
+                condIndStem = persInfStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}queira`
+                presSubjStem = impNegStem
+                futSubjStem = `${stem}quiser`
+                impAffStem = `${stem}que`
+        },
+        "gredir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.GREDIR
+                stem = infinitive.slice(0, -6)
+                impAffStem = `${stem}gr`
+                presIndStem = impAffStem
+                impSubjStem = `${stem}gred`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                pretIndStem = `${stem}gredi`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}grida`
+                presSubjStem = impNegStem
+        },
+        "struir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.STRUIR
+                stem = infinitive.slice(0, -6)
+                gerund = `${stem}struindo`
+                participle = `${stem}struído`
+                persInfStem = `${stem}stru`
+                impAffStem = persInfStem
+                futSubjStem = impAffStem
+                pretIndStem = futSubjStem
+                presIndStem = pretIndStem
+                impIndStem = `${stem}struí`
+                plupIndStem = `${stem}struír`
+                condIndStem = infinitive
+                futIndStem = condIndStem
+                impNegStem = `${stem}strua`
+                presSubjStem = impNegStem
+                impSubjStem = `${stem}struísse`
+        },
+        "prazer": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.PRAZER
+                stem = infinitive.slice(0, -6)
+                impIndStem = `${stem}praz`
+                presIndStem = impIndStem
+                pretIndStem = `${stem}prouve`
+                impSubjStem = `${stem}prouv`
+                plupIndStem = impSubjStem
+                persInfStem = infinitive
+                condIndStem = persInfStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}praza`
+                impAffStem = impNegStem
+                presSubjStem = impAffStem
+                futSubjStem = `${stem}prouver`
+        }
+    },
+    7: {
+        "colorir": (infinitive) => {
+            let verbClass, stem, impAffStem, pretIndStem, impIndStem, presIndStem, impSubjStem, plupIndStem,
+                persInfStem, condIndStem, futIndStem, impNegStem, presSubjStem, futSubjStem;
+                verbClass = VerbClass.DEF_ORIR
+                stem = infinitive.slice(0, -7)
+                impSubjStem = `${stem}color`
+                plupIndStem = impSubjStem
+                impIndStem = plupIndStem
+                presIndStem = impIndStem
+                pretIndStem = `${stem}colori`
+                persInfStem = infinitive
+                futSubjStem = persInfStem
+                condIndStem = futSubjStem
+                futIndStem = condIndStem
+                impNegStem = `${stem}colora`
+                presSubjStem = impNegStem
+                impAffStem = stem
+        }
+    }
+}

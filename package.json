@@ -1,0 +1,12 @@
+{
+  "name": "verb-conjugators",
+  "version": "1.0.0",
+  "description": "verb conjugation thing",
+  "main": "Helper.js",
+  "type": "module",
+  "scripts": {
+    "test": "jcjcgf"
+  },
+  "author": "Sidney Prytherch",
+  "license": "ISC"
+}
