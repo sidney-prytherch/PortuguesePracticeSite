@@ -482,7 +482,7 @@ export class ConjugatorPort {
         }
     }
 
-    conjugatePresInd(infinitive, VerbClass, presIndStem) {
+    conjugatePresInd(infinitive, verbClass, presIndStem) {
         switch (verbClass) {
             case VerbForm.VerbClass.REG_AR :
                 return arrayOf(
